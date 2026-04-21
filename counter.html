@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Counter</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&family=Bebas+Neue&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --bg: #f7f4ef;
+    --card: #ffffff;
+    --text: #111;
+    --muted: #aaa;
+    --inc: #1a1a2e;
+    --dec: #c84b31;
+    --disabled: #e0ddd8;
+    --disabled-text: #bbb;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg);
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  .card {
+    background: var(--card);
+    border-radius: 28px;
+    padding: 56px 64px;
+    text-align: center;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.10);
+    min-width: 340px;
+  }
+
+  .label {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+
+  .counter-display {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 9rem;
+    line-height: 1;
+    color: var(--text);
+    transition: transform 0.12s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.15s;
+    user-select: none;
+  }
+  .counter-display.bump {
+    transform: scale(1.12);
+  }
+
+  .range-hint {
+    color: var(--muted);
+    font-size: 0.78rem;
+    margin-top: 8px;
+    margin-bottom: 40px;
+    font-weight: 300;
+  }
+
+  .controls {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+  }
+
+  button {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    padding: 14px 36px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: transform 0.12s, background 0.15s, box-shadow 0.15s, opacity 0.15s;
+  }
+  button:not(:disabled):active { transform: scale(0.95); }
+
+  #btn-dec {
+    background: var(--dec);
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(200,75,49,0.3);
+  }
+  #btn-dec:not(:disabled):hover {
+    background: #b03d28;
+    box-shadow: 0 6px 24px rgba(200,75,49,0.45);
+  }
+
+  #btn-inc {
+    background: var(--inc);
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(26,26,46,0.25);
+  }
+  #btn-inc:not(:disabled):hover {
+    background: #2a2a50;
+    box-shadow: 0 6px 24px rgba(26,26,46,0.4);
+  }
+
+  button:disabled {
+    background: var(--disabled);
+    color: var(--disabled-text);
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="label">Counter</div>
+  <div class="counter-display" id="display">1</div>
+  <div class="range-hint">Range: 0 – 10</div>
+  <div class="controls">
+    <button id="btn-dec" onclick="change(-1)">− Decrease</button>
+    <button id="btn-inc" onclick="change(1)">+ Increase</button>
+  </div>
+</div>
+
+<script>
+  let count = 1;
+
+  const display = document.getElementById('display');
+  const btnInc = document.getElementById('btn-inc');
+  const btnDec = document.getElementById('btn-dec');
+
+  function updateUI() {
+    display.textContent = count;
+    btnInc.disabled = count >= 10;
+    btnDec.disabled = count <= 0;
+  }
+
+  function change(delta) {
+    const next = count + delta;
+    if (next < 0 || next > 10) return;
+    count = next;
+
+    // bump animation
+    display.classList.remove('bump');
+    void display.offsetWidth; // reflow
+    display.classList.add('bump');
+    setTimeout(() => display.classList.remove('bump'), 150);
+
+    updateUI();
+  }
+
+  updateUI();
+</script>
+</body>
+</html>
