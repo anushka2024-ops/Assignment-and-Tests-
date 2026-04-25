@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anushka — Data Analyst & Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ========== HEADER / NAV ========== -->
+  <header id="header">
+    <nav class="navbar">
+      <div class="nav-logo">
+        <span class="logo-text">A<span class="logo-dot">.</span></span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ========== HOME ========== -->
+  <section id="home" class="section hero-section">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal">Business Analytics · Data Science · AI/ML</p>
+      <h1 class="hero-name reveal">
+        <span class="name-first">Anushka</span>
+      </h1>
+      <p class="hero-tagline reveal">
+        Transforming raw data into<br/>
+        <em>meaningful intelligence.</em>
+      </p>
+      <div class="hero-cta reveal">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+    <div class="hero-corner-decor"></div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section id="about" class="section about-section">
+    <div class="section-header reveal">
+      <span class="section-number">01</span>
+      <h2 class="section-title">About Me</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-image-wrapper reveal">
+        <div class="about-image-frame">
+          <div class="about-image-placeholder">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="100" cy="75" r="38" fill="var(--gold-muted)" opacity="0.6"/>
+              <ellipse cx="100" cy="165" rx="58" ry="40" fill="var(--gold-muted)" opacity="0.4"/>
+            </svg>
+            <p class="img-hint">Add your photo here</p>
+          </div>
+          <div class="image-accent-border"></div>
+        </div>
+      </div>
+      <div class="about-text reveal">
+        <p class="about-intro">
+          Hello — I'm <strong>Anushka</strong>, a second-year <strong>Business Analytics</strong> student at 
+          <strong>Rishihood University</strong>, driven by the belief that data tells stories worth listening to.
+        </p>
+        <p>
+          My academic journey sits at the crossroads of business intuition and technical depth. I work with 
+          data every day — cleaning it, querying it, visualising it, and building systems that make sense of it. 
+          I'm deeply passionate about <strong>Artificial Intelligence</strong>, <strong>Machine Learning</strong>, 
+          and the expanding frontier of data science.
+        </p>
+        <p>
+          Beyond numbers, I care about the human side of data: how insights reach decision-makers, how 
+          dashboards tell clear stories, and how technology creates real-world impact. I believe the best 
+          analyst is one who understands both the code and the context.
+        </p>
+
+        <div class="skills-block">
+          <h3 class="skills-heading">Technical Proficiency</h3>
+          <div class="skills-categories">
+            <div class="skill-category">
+              <span class="skill-cat-label">Languages & Databases</span>
+              <div class="skill-tags">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">PostgreSQL</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <span class="skill-cat-label">Web & Frameworks</span>
+              <div class="skill-tags">
+                <span class="skill-tag">HTML</span>
+                <span class="skill-tag">CSS</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Flask</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <span class="skill-cat-label">Data & Analytics</span>
+              <div class="skill-tags">
+                <span class="skill-tag">Power BI</span>
+                <span class="skill-tag">Tableau</span>
+                <span class="skill-tag">Data Visualisation</span>
+                <span class="skill-tag">Data Cleaning</span>
+                <span class="skill-tag">Excel</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <span class="skill-cat-label">Interests</span>
+              <div class="skill-tags">
+                <span class="skill-tag interest">AI / ML</span>
+                <span class="skill-tag interest">Data Science</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-stats">
+          <div class="stat-item">
+            <span class="stat-num">2nd</span>
+            <span class="stat-label">Year Student</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num">10+</span>
+            <span class="stat-label">Technologies</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num">∞</span>
+            <span class="stat-label">Curiosity</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS ========== -->
+  <section id="projects" class="section projects-section">
+    <div class="section-header reveal">
+      <span class="section-number">02</span>
+      <h2 class="section-title">Projects</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p class="section-subtitle reveal">
+      A selection of work that reflects my approach — analytical, purposeful, and detail-oriented.
+    </p>
+
+    <div class="projects-grid">
+
+      <div class="project-card reveal">
+        <div class="project-card-inner">
+          <div class="project-tag-bar">
+            <span class="project-tag">Python · Data Cleaning</span>
+            <span class="project-number">01</span>
+          </div>
+          <h3 class="project-title">Customer Churn Analysis</h3>
+          <p class="project-desc">
+            Performed end-to-end exploratory data analysis on a telecom dataset to identify 
+            key predictors of customer churn. Applied Python (Pandas, Matplotlib, Seaborn) 
+            for data wrangling, outlier detection, and correlation heatmaps. Delivered actionable 
+            retention insights with clear visual storytelling.
+          </p>
+          <div class="project-tech">
+            <span>Python</span><span>Pandas</span><span>Seaborn</span><span>EDA</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link">View Project →</a>
+          </div>
+        </div>
+        <div class="project-card-accent"></div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-card-inner">
+          <div class="project-tag-bar">
+            <span class="project-tag">SQL · PostgreSQL</span>
+            <span class="project-number">02</span>
+          </div>
+          <h3 class="project-title">Retail Sales Dashboard</h3>
+          <p class="project-desc">
+            Designed and built a relational database schema for a retail business using PostgreSQL. 
+            Wrote complex SQL queries involving joins, window functions, and CTEs to extract KPIs. 
+            Visualised findings in Power BI with an interactive, executive-ready dashboard 
+            enabling real-time sales tracking.
+          </p>
+          <div class="project-tech">
+            <span>PostgreSQL</span><span>SQL</span><span>Power BI</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link">View Project →</a>
+          </div>
+        </div>
+        <div class="project-card-accent"></div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-card-inner">
+          <div class="project-tag-bar">
+            <span class="project-tag">Flask · Web App</span>
+            <span class="project-number">03</span>
+          </div>
+          <h3 class="project-title">Data Insights Web App</h3>
+          <p class="project-desc">
+            Built a lightweight web application using Flask that allows users to upload CSV files 
+            and receive instant summary statistics, visualisations, and data quality reports. 
+            Integrated Python's data stack on the backend with a clean, responsive HTML/CSS/JS 
+            frontend for seamless user experience.
+          </p>
+          <div class="project-tech">
+            <span>Flask</span><span>Python</span><span>HTML/CSS</span><span>JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link">View Project →</a>
+          </div>
+        </div>
+        <div class="project-card-accent"></div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-card-inner">
+          <div class="project-tag-bar">
+            <span class="project-tag">Tableau · Storytelling</span>
+            <span class="project-number">04</span>
+          </div>
+          <h3 class="project-title">COVID-19 Data Visualisation</h3>
+          <p class="project-desc">
+            Created a comprehensive Tableau story covering global COVID-19 trends — case trajectories, 
+            vaccination rates, and economic impacts across regions. Focused on accessible data storytelling: 
+            clear colour encoding, annotation, and narrative flow that guides the viewer from 
+            macro trends to granular insights.
+          </p>
+          <div class="project-tech">
+            <span>Tableau</span><span>Data Viz</span><span>Storytelling</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link">View Project →</a>
+          </div>
+        </div>
+        <div class="project-card-accent"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section id="contact" class="section contact-section">
+    <div class="section-header reveal">
+      <span class="section-number">03</span>
+      <h2 class="section-title">Contact</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p class="section-subtitle reveal">
+      Have a project, opportunity, or just want to connect? I'd love to hear from you.
+    </p>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <h3 class="contact-info-heading">Let's Connect</h3>
+        <p class="contact-info-text">
+          I'm currently open to internship opportunities, collaborative data projects, and 
+          conversations about AI/ML and analytics. Don't hesitate to reach out.
+        </p>
+        <div class="contact-details">
+          <div class="contact-detail-item">
+            <span class="detail-icon">✉</span>
+            <div>
+              <span class="detail-label">Email</span>
+              <a href="mailto:anushka@example.com" class="detail-value">anushka@example.com</a>
+            </div>
+          </div>
+          <div class="contact-detail-item">
+            <span class="detail-icon">📍</span>
+            <div>
+              <span class="detail-label">Location</span>
+              <span class="detail-value">Rishihood University, Haryana, India</span>
+            </div>
+          </div>
+          <div class="contact-detail-item">
+            <span class="detail-icon">🎓</span>
+            <div>
+              <span class="detail-label">Programme</span>
+              <span class="detail-value">B.Sc. Business Analytics, 2nd Year</span>
+            </div>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+          <a href="#" class="social-link" aria-label="GitHub">&#60;/&#62;</a>
+          <a href="#" class="social-link" aria-label="Kaggle">K</a>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="name" class="form-label">Full Name <span class="required">*</span></label>
+          <input type="text" id="name" name="name" class="form-input" placeholder="Your name" autocomplete="name" />
+          <span class="form-error" id="nameError"></span>
+        </div>
+        <div class="form-group">
+          <label for="email" class="form-label">Email Address <span class="required">*</span></label>
+          <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" autocomplete="email" />
+          <span class="form-error" id="emailError"></span>
+        </div>
+        <div class="form-group">
+          <label for="subject" class="form-label">Subject <span class="required">*</span></label>
+          <input type="text" id="subject" name="subject" class="form-input" placeholder="What's this about?" />
+          <span class="form-error" id="subjectError"></span>
+        </div>
+        <div class="form-group">
+          <label for="message" class="form-label">Message <span class="required">*</span></label>
+          <textarea id="message" name="message" class="form-input form-textarea" placeholder="Tell me about your project or opportunity..." rows="5"></textarea>
+          <span class="form-error" id="messageError"></span>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+          <span class="btn-text">Send Message</span>
+          <span class="btn-icon">→</span>
+        </button>
+        <div class="form-success" id="formSuccess">
+          <span>✓</span> Thank you! Your message has been sent. I'll get back to you soon.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-text">A<span class="logo-dot">.</span></span>
+        <p class="footer-tagline">Data · Design · Discovery</p>
+      </div>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <p class="footer-copy">© 2025 Anushka. Crafted with intention.</p>
+    </div>
+    <div class="footer-line"></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
